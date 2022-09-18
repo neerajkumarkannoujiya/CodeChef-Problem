@@ -1,0 +1,100 @@
+Problem
+Problem Statement
+Every problem starts with a Problem Statement. It tells you in detail about the task to be solved.
+Shivam is the youngest programmer in the world, he is just 12 years old. Shivam is learning programming and today he is writing his first program.
+
+The task is very simple: given two integers A and B, write a program to add these two numbers and output it.
+
+Input Format
+This section tells you the format in which your program should receive the input.
+The first line contains an integer T, the total number of test cases. Then follow T lines, each line contains two Integers A and B.
+
+Output Format
+This section tells us the format in which your program should give the output
+For each test case, add A and B and display the sum in a new line.
+
+Everything your program prints is considered “output”, so if you output some debugging statements like “Please enter T”, this will be considered
+as part of your answer, and because it does not satisfy the output format, it will be marked wrong, even if your answer is otherwise correct!
+Constraints
+This section tells you the maximum and minimum possible values the variables in the problem statement can take. You do not need to check these 
+constraints in your program. You can safely assume that the input given to your program will be in the given range of constraints.
+
+1 ≤ T ≤ 1000
+0 ≤ A,B ≤ 10000
+Sample 1:
+Input
+3
+1 2
+100 200
+10 40
+
+Output
+3
+300
+50
+
+
+*****************************************************************************************************************************************
+
+
+
+// You don't need to add/edit anything to the below solution. 
+// Click on the SUBMIT button to solve your first problem on CodeChef.
+
+import java.io.OutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.InputStream;
+
+
+// Remember that the class name should be "Main" and should be "public".
+public class Main {
+	public static void main(String[] args) {
+		// System.in and System.out are input and output streams, respectively.
+		InputStream inputStream = System.in;
+
+		InputReader in = new InputReader(inputStream);
+
+		// Read the number of test casese.		
+		int T = in.nextInt();
+		while (T-- > 0) {
+			// Read the numbers a and b.
+			int a = in.nextInt();
+			int b = in.nextInt();
+			
+			// Compute the sum of a and b.
+			int ans = a + b;
+			System.out.println(ans);
+		}
+	}
+
+	static class InputReader {
+		public BufferedReader reader;
+		public StringTokenizer tokenizer;
+
+		public InputReader(InputStream stream) {
+			reader = new BufferedReader(new InputStreamReader(stream), 32768);
+			tokenizer = null;
+		}
+
+		public String next() {
+			while (tokenizer == null || !tokenizer.hasMoreTokens()) {
+				try {
+				    tokenizer = new StringTokenizer(reader.readLine());
+				} catch (IOException e) {
+				    throw new RuntimeException(e);
+				}
+			}
+			return tokenizer.nextToken();
+		}
+
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+	}
+}
