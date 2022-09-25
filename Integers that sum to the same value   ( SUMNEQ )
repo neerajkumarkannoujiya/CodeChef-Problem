@@ -1,0 +1,75 @@
+Alice has a positive integer NN. She is wondering how many ordered pairs of positive integers (i, j)(i,j) exist such that i + j = Ni+j=N.
+
+Help Alice figure out the answer.
+
+Note that since the pairs are ordered, (1, 2)(1,2) and (2, 1)(2,1) are considered different.
+
+Input Format
+The first and only line of input contains a single integer NN.
+
+Output Format
+Print a single integer, the number of ordered pairs of positive integers (i, j)(i,j) such that i + j = Ni+j=N.
+
+Constraints
+1 \leq N \leq 1001≤N≤100
+Sample 1:
+Input
+Output
+1
+0
+Explanation:
+As both integers must be positive, the minimum sum must be 1 + 1 = 21+1=2. Therefore there are no pairs of positive integers adding up to 11.
+
+Sample 2:
+Input
+Output
+2
+1
+Explanation:
+(1,1)(1,1) is the only pair whose sum is 22. Every other pair has a sum of at least 33.
+
+Sample 3:
+Input
+Output
+3
+2
+Explanation:
+The two pairs are (1, 2)(1,2) and (2, 1)(2,1).
+
+
+
+
+
+
+******************************************************************************************************************************************************
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+			Scanner s = new Scanner(System.in);
+		int count = 0;
+		int n = s.nextInt();
+		for(int i = 1;i<n;i++){
+		    for(int j = 1;j<n;j++){
+		        if((i+j)==n){
+		            count++;
+		            break;
+		        }
+		    }
+		}
+		System.out.println(count);
+	}
+}
