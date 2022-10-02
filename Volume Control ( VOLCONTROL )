@@ -13,10 +13,11 @@ Constraints
 1 \leq X, Y \leq 1001≤X,Y≤100
 Sample 1:
 Input
-Output
 2
 50 54
 12 10
+
+Output
 4
 2
 Explanation:
