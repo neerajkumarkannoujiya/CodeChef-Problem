@@ -13,7 +13,7 @@ If no one wins the challenge (since problem PP is the most difficult), output Dr
 
 Note: The problem with the fewest successful submissions is the most difficult.
 
-Input Format
+Input Format:
 The first line of input contains a single integer TT, which represents the number of test cases. The following is a description of TT test cases.
 Each test case's first and only line comprises three space-separated integers S_P, S_Q, S_R
  , which represent the number of successful submissions of problems P, Q, RP,Q,R, respectively.
