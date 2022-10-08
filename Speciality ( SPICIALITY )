@@ -1,0 +1,88 @@
+On every CodeChef user's profile page, the list of problems that they have set, tested, and written editorials for, is listed at the bottom.
+
+Given the number of problems in each of these 33 categories as X, Y,X,Y, and ZZ respectively (where all three integers are distinct), find if 
+the user has been most active as a Setter, Tester, or Editorialist.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three space-separated integers X,Y, and Z - the number of problems they have set, tested, and written editorials for.
+Output Format
+For each test case, output in a new line:
+
+Setter, if the user has been most active as a setter.
+Tester, if the user has been most active as a tester.
+Editorialist, if the user has been most active as an editorialist.
+Note that the output is case-insensitive. Thus, the strings SETTER, setter, seTTer, and Setter are all considered the same.
+
+Constraints
+1≤T≤10^4
+1≤X,Y,Z≤100, where X,Y, and Z are distinct.
+Sample 1:
+Input
+4
+5 3 2
+1 2 4
+2 5 1
+9 4 5
+
+Output
+Setter
+Editorialist
+Tester
+Setter
+Explanation:
+Test case 11: The number of problems that the user has set is greater than the number of problems tested or written editorials for.
+Thus, the user is most active as setter.
+
+Test case 22: The number of problems that the user has written editorials for, is greater than the number of problems set or tested.
+Thus, the user is most active as editorialist.
+
+Test case 33: The number of problems that the user has tested is greater than the number of problems set or written editorials for.
+Thus, the user is most active as tester.
+
+Test case 44: The number of problems that the user has set is greater than the number of problems tested or written editorials for.
+Thus, the user is most active as setter.
+
+
+
+
+
+*********************************************************************************************************************************************
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    int z = s.nextInt();
+		    
+		    if(x>y && x>z){
+		        System.out.println("Setter");
+		    }
+		    else if(y>x && y>z){
+		        System.out.println("Tester");
+		    }else{
+		        System.out.println("Editorialist");
+		    }
+		    
+		    t--;
+		}
+	}
+}
