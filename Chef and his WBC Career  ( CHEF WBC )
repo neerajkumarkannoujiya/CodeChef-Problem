@@ -1,0 +1,83 @@
+Chef has been participating in World's Best Chef (WBC) for 7 years in a row now. Chef calls his WBC career successful if the number of times
+he has won is strictly greater than the number of times he didn't. WBC takes place annually. Chef's WBC career is described as an array of
+containing 7 elements. The ith element ai is 1 if Chef has won in the ith year and 0 otherwise.
+
+Find if Chef's career was successful or not.
+
+Input Format
+First line of input contains a single integer T, number of testcases. The description of each test case follows.
+The first and the only line of each test case contains 77 space-separated integers, ith of them is ai.
+Output Format
+For each test case print "Yes" (without quotes) if Chef's career was successful and "No" otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Constraints
+1<=T<=20
+ai ∈ {0,1}
+Sample 1:
+Input
+3
+1 1 1 1 0 0 0
+1 0 1 0 1 0 1
+0 1 0 1 0 1 0
+
+Output
+YES
+YES
+NO
+Explanation:
+In the first test case, Chef has won 44 times and lost 33 times.
+
+
+
+
+
+
+*****************************************************************************************************************************************
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int arr[] = new int[7];
+		    for(int i =0;i<arr.length;i++){
+		        arr[i]=s.nextInt();
+		    }
+		    int count1 = 0;
+		    int count0 = 0;
+		    for(int i =0;i<arr.length;i++){
+		        if(arr[i]==1){
+		            count1++;
+		        }
+		        if(arr[i]==0){
+		            count0++;
+		        }
+		        
+		    }
+		    
+		    if(count1>count0){
+		        System.out.println("YES");
+		        
+		    }else{
+		        System.out.println("NO");
+		    }
+		    t--;
+		}
+	}
+}
