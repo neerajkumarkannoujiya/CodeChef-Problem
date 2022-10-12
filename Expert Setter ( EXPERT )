@@ -1,0 +1,88 @@
+A problem setter is called an expert if at least 50% of their problems are approved by Chef.
+
+Munchy submitted XX problems for approval. If YY problems out of those were approved, find whether Munchy is an expert or not.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of a two space-separated integers X and Y - the number of problems submitted and the number of problems that were approved by Chef.
+Output Format
+For each test case, output on a new line YES, if Munchy is an expert. Otherwise, print NO.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+
+Constraints
+1<=T<=1000
+1<=Y<=X<=10^6
+Sample 1:
+Input
+4
+5 3
+1 1
+4 1
+2 1
+
+Output
+YES
+YES
+NO
+YES
+
+
+Explanation:
+Test case 1: We are given that 3 out of 5 problems were approved. Thus, 60% of the problems were approved. Since at least 0% of the problems were approved, 
+Munchy is an expert.
+
+Test case 2: We are given that 1 out of 1 problems were approved. Thus, 100% of the problems were approved. Since at least 50% of the problems were approved,
+Munchy is an expert.
+
+Test case 3: We are given that 1 out of 4 problems were approved. Thus, 25% of the problems were approved. Since at least 50% of the problems were not approved,
+Munchy is not an expert.
+
+Test case 4: We are given that 1 out of 2 problems were approved. Thus, 50% of the problems were approved. Since at least 50% of the problems were approved, 
+Munchy is an expert.
+
+
+
+
+
+
+
+
+************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes heres.
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    float y = s.nextInt();
+		    float x = s.nextInt();
+		    float val = (y*50)/100;
+		    if(val<=x){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    
+		    
+		    t--;
+		}
+	}
+}
