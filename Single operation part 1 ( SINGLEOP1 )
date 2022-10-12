@@ -1,0 +1,94 @@
+Chef has the binary representation S of a number XX with him. He can modify the number by applying the following operation exactly once:
+
+Make X X:=X ⊕ ⌊ X/2^Y⌋ , where (1<=Y<= |S|) and ⊕ denotes the bitwise XOR operation.
+Chef wants to maximize the value of XX after performing the operation. Help Chef in determining the value of Y which will maximize the value of X
+after the operation.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of two lines of inputs - the first containing the length of binary string S.
+The second line of input contains the binary string SS.
+Output Format
+For each test case, output on a new line, the value of YY which will maximize the value of X after the operation.
+
+Constraints
+1<=T<=5⋅10^4 
+1<=|S|<=10^5 
+The sum of |S| over all test cases won't exceed 5⋅10^5.
+S contains the characters 0 and 1 only.
+Sample 1:
+Input
+4
+2
+10
+2
+11
+3
+101
+3
+110
+
+
+Output
+1
+2
+1
+2
+Explanation:
+Test case 1: Since S=10 is the binary representation of 2, the current value of X=2. On choosing Y=1, XX becomes 2 ⊕ ⌊ 3/2^2 ⌋ = 3. 
+We can show that this is the maximum value of X we can achieve after one operation.
+
+Test case 2: Since S=11 is the binary representation of 3, the current value of X=3. On choosing Y=2, X becomes 3 ⊕ ⌊ 3/2^2  ⌋ = 3.
+We can show that this is the maximum value of X we can achieve after one operation.
+
+Test case 3: Since S=101 is the binary representation of 5, the current value of X=5. On choosing Y=1, XX becomes 5 ⊕ ⌊ 2/2^5 ⌋ = 7.
+We can show that this is the maximum value of X we can achieve after one operation.
+
+Test case 4: Since S=110 is the binary representation of 6, the current value of X=6. On choosing Y=2, XX becomes 6 ⊕ ⌊  2/2^6 ⌋ = 7.
+We can show that this is the maximum value of X we can achieve after one operation.
+
+
+
+
+
+********************************************************************************************************************************************
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t =s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    String st = s.next();
+		    int count=0;
+		    for(int i =0;i<n;i++){
+		        if(st.charAt(i)=='1'){
+		            count++;
+		        } else{
+		            break;
+		        }
+		       
+		    }
+		    System.out.println(count);
+		    
+		    t--;
+		}
+		
+	}
+}
