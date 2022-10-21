@@ -5,6 +5,7 @@ Shivam is the youngest programmer in the world, he is just 12 years old. Shivam 
 
 The task is very simple: given two integers A and B, write a program to add these two numbers and output it.
 
+
 Input Format
 This section tells you the format in which your program should receive the input.
 The first line contains an integer T, the total number of test cases. Then follow T lines, each line contains two Integers A and B.
