@@ -1,0 +1,78 @@
+Chef has 33 numbers A,B and C.
+
+Chef wonders if it is possible to choose exactly two numbers out of the three numbers such that their sum is odd.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of three integers A,B,C.
+Output Format
+For each test case, output YES if you can choose exactly two numbers with odd sum, NO otherwise.
+
+The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
+
+Constraints
+1≤T≤100
+1≤A,B,C≤10
+Sample 1:
+Input
+4
+1 2 3
+8 4 6
+3 3 9
+7 8 6
+
+Output
+YES
+NO
+NO
+YES
+Explanation:
+Test case 1: Chef can choose 2 and 3 since 2+3=5 and 55 is odd.
+
+Test case 2: It can be shown that Chef cannot choose two numbers among 8, 4 and 6 with odd sum.
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************************************************************
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int a = s.nextInt();
+		    int b = s.nextInt();
+		    int c = s.nextInt();
+		    int n1 = a+b;
+		    int n2 = b+c;
+		    int n3 = c+a;
+		    if(n1%2!=0 || n2%2!=0 || n3%2!=0){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    t--;
+		}
+	}
+}
