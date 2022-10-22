@@ -13,7 +13,8 @@ The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all
 
 Constraints
 1≤T≤10^4
-1≤X≤10^6 
+1≤X≤10^6
+
  
 Sample 1:
 Input
