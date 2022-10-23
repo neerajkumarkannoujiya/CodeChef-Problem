@@ -23,6 +23,7 @@ Example - Incorrect Withdrawal Amount (not multiple of 5)
 Input:
 42 120.00
 
+
 Output:
 120.00
 
