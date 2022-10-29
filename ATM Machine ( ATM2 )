@@ -15,6 +15,7 @@ Output
 For each test case, print a single line containing a string with length N. For each valid i, the i-th character of this string should be
 '1' if the i-th person will successfully withdraw their money or '0' otherwise.
 
+
 Constraints
 1≤T≤100
 1≤N≤100
