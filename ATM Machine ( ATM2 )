@@ -11,7 +11,6 @@ The first line of the input contains a single integer T denoting the number of t
 The first line of each test case contains two space-separated integers N and K.
 The second line contains N space-separated integers A1,A2,..........,An.
 
-
 Output
 For each test case, print a single line containing a string with length N. For each valid i, the i-th character of this string should be
 '1' if the i-th person will successfully withdraw their money or '0' otherwise.
