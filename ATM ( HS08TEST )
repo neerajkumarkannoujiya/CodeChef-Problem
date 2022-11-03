@@ -19,6 +19,7 @@ Example - Successful Transaction
 Input:
 30 120.00
 
+
 Output:
 89.50
 Example - Incorrect Withdrawal Amount (not multiple of 5)
