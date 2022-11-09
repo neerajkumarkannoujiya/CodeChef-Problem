@@ -1,0 +1,104 @@
+Luigi has an array A of N positive integers. He wants to make all elements of the array equal.
+
+In one move, he can:
+
+Choose an index i(1≤i≤N) and divide the element Ai by any one of its divisors.
+In other words, he can choose a positive integer X such that X | Ai and set Ai := Ai/X.
+Find the minimum number of moves required to make all the elements of the array equal.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains NN, the size of array A.
+The second line of each test case contains NN space-separated integers, the elements of array A.
+Output Format
+For each test case, output on a new line, the minimum number of moves required to make all elements of the array equal.
+
+Constraints
+1≤T≤1000
+1≤N≤3000
+1 <= Ai <= 10^9
+ 
+Sample 1:
+Input
+4
+2
+11 22
+5
+38 38 38 38 38
+4
+4 4 16 8
+4
+11 13 17 19
+
+Output
+1
+0
+2
+4
+
+Explanation:
+Test case 1: We can change 22 to 11 using an operation (divide by 22). Thus, using one operation, we made all the elements equal.
+
+Test case 2: All numbers are already same. Thus, we do not need to do any operations.
+
+
+
+
+
+
+
+
+************************************************************************************************************************************************
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t =s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int arr[] = new int[n];
+		    for(int i =0;i<n;i++){
+		        arr[i] = s.nextInt();
+		    }
+		    int min = Integer.MAX_VALUE;
+		    for(int i =0;i<n;i++){
+		        if(arr[i]<min){
+		            min = arr[i];
+		        }
+		    }
+		    int count = 0;
+		    for(int i =0;i<n;i++){
+		        if(arr[i]>min){
+		            if(arr[i]%min==0){
+		                count++;
+		            }else{
+		                count = n;
+		                break;
+		            }
+		        }
+		    }
+		    System.out.println(count);
+		    t--;
+		}
+
+	}
+}
+
+
