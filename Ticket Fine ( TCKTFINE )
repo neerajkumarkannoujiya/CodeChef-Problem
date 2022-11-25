@@ -1,0 +1,86 @@
+On a certain train, Chef-the ticket collector, collects a fine of Rs. X if a passenger is travelling without a ticket. It is known that a passenger carries
+either a single ticket or no ticket.
+
+PP passengers are travelling and they have a total of Q tickets. Help Chef calculate the total fine collected.
+
+Input Format
+The first line contains a single integer T, the number of test cases. T lines follow. Each following line contains three integers separated by spaces,
+whose description follows.
+
+The first integer, X, is the fee in rupees.
+The second integer, P, is the number of passengers on the train.
+The third integer, Q, is the number of tickets Chef collected.
+Output Format
+The output must consist of TT lines.
+
+The ith line must contain a single integer, the total money(in rupees) collected by Chef corresponding to the ith test case.
+Constraints
+1≤T≤10
+1≤X≤10
+0≤Q≤P≤10
+Sample 1:
+
+Input
+4
+4 1 1
+2 10 7
+8 5 4
+9 7 0
+
+Output
+0
+6
+8
+63
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int x = s.nextInt();
+		    int p = s.nextInt();
+		    int q = s.nextInt();
+		    int val = p-q;
+		    System.out.println(x*val);
+		    
+		    t--;
+		}
+	}
+}
