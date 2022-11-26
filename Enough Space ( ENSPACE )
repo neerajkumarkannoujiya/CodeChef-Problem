@@ -1,0 +1,81 @@
+Chef's computer has N GB of free space. He wants to save X files, each of size 1 GB and Y files, each of size 2 GB on his computer. Will he be able to do so?
+
+Chef can save all the files on his computer only if the total size of the files is less than or equal to the space available on his computer.
+
+Input Format
+The first line contains an integer T, denoting the number of test cases. The T test cases then follow:
+The first and only line of each test case contains three integers N, X, Y denoting the free-space in computer, the number of 1 and 2 GB files respectively.
+Output Format
+For each test case, print YES if Chef is able to save the files and NO otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes and YES will all be treated as identical).
+
+Constraints
+1≤T≤100
+1≤N,X,Y≤100
+Sample 1:
+Input
+4
+6 3 1
+2 2 2
+4 3 2
+5 1 2
+
+Output
+YES
+NO
+NO
+YES
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    if((x*1)+(y*2)<=n){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    t--;
+		}
+	}
+}
