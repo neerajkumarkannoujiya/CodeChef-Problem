@@ -1,0 +1,112 @@
+You are given an array A = [A1,A2,A3,.........,An].
+
+Is it possible to partition AA into two non-empty subsequences S1 and S2 such that sum(S1)×sum(S2) is odd?
+
+Here, sum(S1) denotes the sum of elements in S1, and sum(S2) is defined similarly.
+
+Note: S1 and S2 must partition A, that is:
+
+S1 and S2 must be non-empty
+Every element of A must be in either S1 or S2.
+S1 and S2 must be disjoint (in terms of which indices their subsequences represent)
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of 2 lines of input.
+The first line of each test case contains a single integer N, the size of the array.
+The next line contains N space-separated integers A1,A2,A3,........,An: the elements of the array.
+Output Format
+For each test case, print on a new line the answer: YES if the array can be partitioned into two subsequences satisfying the condition, and NO otherwise.
+
+Each character of the output may be printed in either uppercase or lowercase, i.e, YES, yes, YEs, and yEs will all be treated as equivalent.
+
+Constraints
+1≤T≤10^5
+2≤N≤10^5
+1≤Ai≤10^9
+ 
+The sum of NN across all test cases won't exceed 10^6.
+ 
+Sample 1:
+Input
+4
+4
+1 1 2 2
+6
+1 2 4 6 8 10
+2
+3 5
+3
+1 3 5
+
+Output
+YES
+NO
+YES
+NO
+
+Explanation:
+Test case 1: We have A = [1,1,2,2]. Let S1 be the underlined elements and S2 be the other ones. sum(S1) * sum(S2) = 3 * 3 = 9.
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int arr[] = new int[n];
+		    
+		    int odc = 0;
+		    for(int i =0;i<arr.length;i++){
+		        arr[i]=s.nextInt();
+		        if(arr[i]%2!=0){
+		            odc++;
+		        }
+		        
+		    }
+		    
+		    if(odc%2==0 && odc>1){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    t--;
+		}
+	}
+}
