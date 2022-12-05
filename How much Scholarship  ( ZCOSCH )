@@ -1,0 +1,71 @@
+The ZCO Scholarship Contest has just finished, and you finish with a rank of R. You know that Rank 1 to Rank 50 will get 100% scholarship on the ZCO exam fee and
+Rank 51 to Rank 100 will get 50% percentage scholarship on the ZCO exam fee. The rest do not get any scholarship.
+What percentage of scholarship will you get ?
+
+Input Format
+Input consist of single line of input containing one integer R.
+Output Format
+Output a single line containing one integer — the percentage of scholarship you will get.
+Constraints
+1≤R≤10^9
+ 
+Sample 1:
+Input
+49
+
+Output
+100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int r = s.nextInt();
+		if(r<=50 && r>=1){
+		    System.out.println(100);
+		}else if(r<=100 && r>=51){
+		    System.out.println(50);
+		}
+		else{
+		    System.out.println(0);
+		}
+	}
+}
