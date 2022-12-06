@@ -1,0 +1,93 @@
+Chef wants to give a burger party to all his N friends i.e. he wants to buy one burger for each of his friends.
+
+The cost of each burger is X rupees while Chef has a total of K rupees.
+
+Determine whether he has enough money to buy a burger for each of his friends or not.
+
+Input Format
+The first line contains a single integer T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains the three integers N, X, and K - the number of Chef's friends, the cost of each burger, and the total money
+Chef has, respectively.
+Output Format
+For each test case, output YES if the Chef can give a party to all his NN friends. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1≤T≤1000
+1≤N,X≤100
+1≤K≤10000
+
+Sample 1:
+Input
+4
+5 10 70
+5 10 40
+10 40 400
+14 14 150
+
+Output
+YES
+NO
+YES
+NO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int x = s.nextInt();
+		    int k = s.nextInt();
+		    if((n*x)<=k){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    
+		    t--;
+		}
+	}
+}
