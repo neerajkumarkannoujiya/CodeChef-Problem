@@ -1,0 +1,84 @@
+Chef is given two integers A and C such that A≤C.
+
+Chef wants to find whether there exists any integer B such that A, B and C are in arithmetic progression.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+Each test case consists of two space-separated integers A and C, the given integers.
+Output Format
+For each test case, output −1 if there exists no integer B such that A, B and C are in arithmetic progression. Else, output the value of B.
+
+Constraints
+1≤T≤60
+1≤A≤C≤10
+Sample 1:
+Input
+4
+3 5
+6 6
+2 7
+1 9
+
+Output
+4
+6
+-1
+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+*****************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int a = s.nextInt();
+		    int c = s.nextInt();
+		    if(a==c){
+		        System.out.println(a);
+		    }else if((a+c)%2==0){
+		        System.out.println((a+c)/2);
+		    }else{
+		        System.out.println(-1);
+		    }
+		    
+		    
+		    t--;
+		}
+	}
+}
