@@ -110,3 +110,84 @@ class Codechef
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****************************************************************    OR    ***********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		while(t>0){
+		    int n=s.nextInt();
+		    int x=s.nextInt();
+		    int c=s.nextInt();
+		    
+		    int arr[]=new int[n];
+		    int sum=0;
+		    int operation=0;
+		    for(int i=0;i<n;i++){
+		        arr[i]=s.nextInt();
+		        sum=sum+arr[i];
+		        
+		    }
+		    Arrays.sort(arr);
+		    int defaultsum=sum;
+		    int val=0;
+		    for(int i=0;i<n;i++){
+		        arr[i]=x;
+		        int sum1=0;
+		        for(int j=0;j<n;j++){
+		           sum1=sum1+arr[j]; 
+		        }
+		        int result=sum1-((i+1)*c);
+		        if(result>defaultsum){
+		            defaultsum=result;
+		            operation=i+1;
+		            //val=sum1;
+		            }
+		    }
+		    System.out.println(defaultsum);
+		    t--;
+		}
+	}
+}
