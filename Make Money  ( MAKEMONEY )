@@ -69,4 +69,44 @@ The final array is A = [5, 5, 3, 4, 5] and the total cost is 2+2 = 4. Thus, the 
 
 
 
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		while(t>0){
+		    int n=s.nextInt();
+		    int x=s.nextInt();
+		    int c=s.nextInt();
+		    
+		    int arr[]=new int[n];
+		    int sum=0;
+		    int val = x-c;
+		    int count = 0;
+		    for(int i=0;i<n;i++){
+		        arr[i]=s.nextInt();
+		        if(arr[i]<val){
+		            sum = sum + x;
+		            count++;
+		        }
+		        else{
+		            sum = sum + arr[i];
+		        }
+		        
+		    }
+		    System.out.println(sum-(count*c));
+		    
+		    t--;
+		}
+	}
+}
 
