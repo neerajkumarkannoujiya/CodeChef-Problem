@@ -10,6 +10,7 @@ It is known that Chef requires X minutes to solve Problem A correctly and Y minu
 
 Find the maximum number of points Chef can score if he optimally decides the order of attempting both the problems.
 
+
 Input Format
 First line will contain T, number of test cases. Then the test cases follow.
 Each test case contains of a single line of input, two integers X and Y - the time required to solve problems A and B in minutes respectively.
