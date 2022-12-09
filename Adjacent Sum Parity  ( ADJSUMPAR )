@@ -1,0 +1,119 @@
+Chef has an array A of length N.
+
+Chef forms a binary array BB of length N using the parity of the sums of adjacent elements in A. Formally,
+
+Bi = (Ai + A{i+1})%2 for 1≤i≤N−1
+BN = (AN + A1)%2
+Here x%y denotes the remainder obtained when x is divided by y.
+
+Chef lost the array A and needs your help. Given array B, determine whether there exits any valid array A which could have formed B.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer N — the size of the array A.
+The second line of each test case contains N space-separated integers B1, B2,,…,Bn denoting the array B.
+Output Format
+For each testcase, output YES if there exists a valid array A, NO otherwise.
+
+You can print any character in any case. For example YES, Yes, yEs are all considered same.
+
+Constraints
+1≤T≤1000
+2≤N≤10^5
+Bi ∈{0,1}
+The sum of N over all test cases do not exceed 3⋅10^5.
+
+Sample 1:
+Input
+4
+2
+0 0
+2
+1 0
+4
+1 0 1 0
+3
+1 0 0
+
+Output
+YES
+NO
+YES
+NO
+
+Explanation:
+Test case 1: One such valid array is A = [3, 3].
+
+Test case 2: It can be shown that no such arrays exist and are valid.
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int arr[] = new int[n];
+		    int count0 = 0;
+		    int count1 = 0;
+		    for(int i =0;i<n;i++){
+		        arr[i]=s.nextInt();
+		        if(arr[i]==0){
+		            count0++;
+		        }
+		        if(arr[i]==1){
+		            count1++;
+		        }
+		    }
+		    
+		    if(n%2==0){
+		        if(count1==count0 || count1%2==0){
+		            System.out.println("Yes");
+		        }else{
+		            System.out.println("No");
+		        }
+		    }
+		    
+		    
+		    
+		    t--;
+		}
+	}
+}
