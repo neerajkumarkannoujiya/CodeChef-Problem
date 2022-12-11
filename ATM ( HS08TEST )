@@ -3,6 +3,7 @@ account balance has enough cash to perform the withdrawal transaction (including
 
 Calculate Pooja's account balance after an attempted transaction.
 
+
 Input
 Positive integer 0 < X <= 2000 - the amount of cash which Pooja wishes to withdraw.
 
