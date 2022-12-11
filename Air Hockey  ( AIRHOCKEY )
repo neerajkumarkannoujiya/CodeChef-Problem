@@ -1,0 +1,77 @@
+Alice is playing Air Hockey with Bob. The first person to earn seven points wins the match. Currently, Alice's score is A and Bob's score is B.
+
+Charlie is eagerly waiting for his turn. Help Charlie by calculating the minimum number of points that will be further scored in the match before it ends.
+
+Input Format
+The first line of input will contain an integer T — the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two space-separated integers AA and BB, as described in the problem statement.
+Output Format
+For each test case, output on a new line the minimum number of points that will be further scored in the match before it ends.
+
+Constraints
+1≤T≤50
+0≤A,B≤6
+Sample 1:
+Input
+4
+0 0
+2 5
+5 2
+4 3
+
+Output
+7
+2
+2
+3
+
+
+
+
+
+
+
+
+
+
+
+******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t  = s.nextInt();
+		while(t!=0){
+		    int a = s.nextInt();
+		    int b = s.nextInt();
+		    int val = Math.max(a,b);
+		    System.out.println(7-val);
+		    t--;
+		}
+		
+	}
+}
