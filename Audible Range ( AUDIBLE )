@@ -10,6 +10,7 @@ For each test case, output on a new line YES, if binary can hear Chef's commands
 
 The output is case-insensitive. Thus, the strings YES, yes, yeS, and Yes are all considered the same.
 
+
 Constraints
 1≤T≤10^4
 1≤X≤10^6
