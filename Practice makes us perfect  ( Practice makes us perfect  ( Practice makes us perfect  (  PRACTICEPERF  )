@@ -1,0 +1,91 @@
+Most programmers will tell you that one of the ways to improve your performance in competitive programming is to practice a lot of problems.
+
+Our Chef took the above advice very seriously and decided to set a target for himself.
+
+Chef decides to solve at least 10 problems every week for 4 weeks.
+Given the number of problems he actually solved in each week over 4 weeks as P1, P2, P3 and P4 , output the number of weeks in which Chef met his target.
+
+Input Format
+There is a single line of input, with 44 integers P1, P2, P3 and P4 . These are the number of problems solved by Chef in each of the 4 weeks.
+
+Output Format
+Output a single integer in a single line - the number of weeks in which Chef solved at least 1010 problems.
+
+Constraints
+1 <= P1, P2, P3, P4 <= 100
+
+Sample 1:
+Input
+12 15 8 10
+
+Output
+3
+Explanation:
+Chef solved at least 10 problems in the first, second and fourth weeks. He failed to solve at least 10 problems in the third week. Hence, the number 
+of weeks in which Chef met his target is 3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int count = 0;
+		int p1 = s.nextInt();
+		if(p1>=10) count++;
+		int p2 = s.nextInt();
+		if(p2>=10) count++;
+		int p3 = s.nextInt();
+		if(p3>=10) count++;
+		int p4 = s.nextInt();
+		if(p4>=10) count++;
+		System.out.println(count);
+	}
+}
