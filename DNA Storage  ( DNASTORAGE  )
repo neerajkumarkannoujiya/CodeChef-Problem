@@ -1,0 +1,125 @@
+For encoding an even-length binary string into a sequence of A, T, C, and G, we iterate from left to right and replace the characters as follows:
+
+00 is replaced with A
+01 is replaced with T
+10 is replaced with C
+11 is replaced with G
+Given a binary string S of length NN (NN is even), find the encoded sequence.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+Each test case contains two lines of input.
+First line contains a single integer N, the length of the sequence.
+Second line contains binary string SS of length N.
+Output Format
+For each test case, output in a single line the encoded sequence.
+
+Note: Output is case-sensitive.
+
+Constraints
+1≤T≤100
+2≤N≤10^3
+N is even.
+Sum of N over all test cases is at most 10^3.
+S contains only characters 0 and 1.
+
+Sample 1:
+Input
+4
+2
+00
+4
+0011
+6
+101010
+4
+1001
+
+Output
+A
+AG
+CCC
+CT
+
+Explanation:
+Test case 1: Based on the rules 00 is replaced with A.
+
+Test case 2: Based on the rules 00 is replaced with A. Similarly, 11 is replaced with G. Thus, the encoded sequence is AG.
+
+Test case 3: The first two characters are 10 which is encoded as C. Similarly, the next two characters 10 are encoded as C and the last two characters 
+10 are encoded as C. Thus, the encoded string is CCC.
+
+Test case 4: The first two characters are 10 which is encoded as C. Similarly, the next two characters 01 are encoded as T. Thus, the encoded string is CT.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    String st = s.next();
+		    String nst = "";
+		    for(int i = 0;i<st.length();i=i+2){
+		        if(st.charAt(i)=='0') {
+		            if(st.charAt(i+1)=='0'){
+		                nst = nst + 'A';
+		            }else{
+		                nst = nst + 'T';
+		            }
+		                
+		        }else{
+		            if(st.charAt(i+1)=='0'){
+		                nst=nst + 'C';
+		            }else{
+		                nst = nst + 'G';
+		            }
+		                
+		        }
+		    }
+		    System.out.println(nst);
+		    t--;
+		}
+	}
+}
