@@ -1,0 +1,82 @@
+Write a program to check whether a triangle is valid or not, when the three angles of the triangle are the inputs. A triangle is valid if the sum of all the
+three angles is equal to 180 degrees.
+
+Input Format
+The first line contains an integer T, the total number of testcases. Then T lines follow, each line contains three angles A, B and C, of the triangle separated by space.
+
+Output Format
+For each test case, display 'YES' if the triangle is valid, and 'NO', if it is not, in a new line.
+
+Constraints
+1 ≤ T ≤ 1000 1 ≤ A,B,C ≤ 180
+
+Sample 1:
+Input
+3 
+40 40 100
+45 45 90
+180 1 1
+
+Output
+YES
+YES
+NO
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t= s.nextInt();
+		while(t!=0){
+		    int a = s.nextInt();
+		    int b = s.nextInt();
+		    int c = s.nextInt();
+		    
+		    if((a + b + c)==180){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    t--;
+		}
+	}
+}
