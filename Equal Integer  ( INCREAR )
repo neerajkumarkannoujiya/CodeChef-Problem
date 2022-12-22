@@ -1,0 +1,94 @@
+Chef has two integers X and Y. Chef wants to perform some operations to make X and Y equal. In one operation, Chef can either:
+
+set X := X + 1
+or set Y := Y + 2
+Find the minimum number of operations required to make X and Y equal.
+
+Input Format
+The first line contains a single integer T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space separated integers X and Y.
+Output Format
+For each test case, print the minimum number of operations required to make X and Y equal.
+
+Constraints
+1≤T≤10^4
+1≤X,Y≤10^9
+ 
+Sample 1:
+Input
+5
+3 4
+5 5
+7 3
+5 2
+7 12
+
+Output
+1
+0
+2
+3
+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    int val = x-y;
+		    if(x==y){
+		        System.out.println(0);
+		    }else if(y>x){
+		        System.out.println(y-x);
+		    }else{
+		        if(val%2==0){
+		            System.out.println(val/2);
+		        }else{
+		            System.out.println((val+1)/2 + 1);
+		        }
+		    }
+		    t--;
+		}
+	}
+}
