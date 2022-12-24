@@ -1,0 +1,111 @@
+Chef has been participating regularly in rated contests but missed the last two contests due to his college exams. He now wants to solve them and so he visits
+the practice page to view these problems.
+
+Given a list of N contest codes, where each contest code is either START38 or LTIME108, help Chef count how many problems were featured in each of the contests.
+
+Input Format
+First line will contain T, number of test cases. Then the test cases follow.
+Each test case contains of two lines of input.
+First line of input contains the total count of problems that appeared in the two recent contests - N.
+Second line of input contains the list of N contest codes. Each code is either START38 or LTIME108, to which each problem belongs.
+Output Format
+For each test case, output two integers in a single new line - the first integer should be the number of problems in START38, and the second integer should be 
+the number of problems in LTIME108.
+
+Constraints
+1≤T≤10
+1≤N≤1000
+Each of the contest codes will be either START38 or LTIME108.
+Sample 1:
+Input
+4
+3
+START38 LTIME108 START38
+4
+LTIME108 LTIME108 LTIME108 START38
+2
+LTIME108 LTIME108
+6
+START38 LTIME108 LTIME108 LTIME108 START38 LTIME108
+
+Output
+2 1
+1 3
+0 2
+2 4
+
+Explanation:
+Test case 1: There are 2 START38s in the input, which means that there were 2 problems in START38. Similarly, there was 1 problem in LTIME108.
+
+Test case 2: There is 1 START38 in the input, which means that there was 1 problem in START38. Similarly, there were 3 problems in LTIME108.
+
+Test case 3: There are no START38s in the input, which means that were 0 problems in START38. Similarly, there were 2 problems in LTIME108.
+
+Test case 4: There are 2 START38s in the input, which means that there were 2 problems in START38. Similarly, there were 4 problems in LTIME108.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    String arr[] = new String[n];
+		    for(int i = 0;i<n;i++){
+		        
+		        arr[i] = s.next();
+		    }
+		    int sct = 0;
+		    int lct = 0;
+		    for(int i =0;i<n;i++){
+		        if(arr[i].equals("START38")){
+		            sct++;
+		        }else{
+		            lct++;
+		        }
+		    }
+		    System.out.println(sct + " " + lct);
+		    t--;
+		}
+	}
+}
