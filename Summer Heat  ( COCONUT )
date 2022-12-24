@@ -1,0 +1,85 @@
+Chefland has 2 different types of coconut, type A and type B. Type A contains only xa milliliters of coconut water and type B contains only xb grams of coconut pulp.
+Chef's nutritionist has advised him to consume Xa milliliters of coconut water and Xb grams of coconut pulp every week in the summer. Find the total number of
+coconuts (type A + type B) that Chef should buy each week to keep himself active in the hot weather.
+
+Input Format
+The first line contains an integer T, the number of test cases. Then the test cases follow.
+Each test case contains a single line of input, four integers xa , xb, Xa , Xb.
+
+Output Format
+For each test case, output in a single line the answer to the problem.
+
+Constraints
+1≤T≤15000
+100≤xa≤200
+400≤xb ≤500
+1000≤Xa ≤1200
+1000≤Xb≤1500
+xa divides Xa.
+xb divides Xb.
+Subtasks
+Subtask #1 (100 points): original constraints
+
+Sample 1:
+Input
+Output
+3
+100 400 1000 1200
+100 450 1000 1350
+150 400 1200 1200
+13
+13
+11
+
+
+
+
+
+
+
+
+
+
+
+****************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    float xa = s.nextInt();
+		    float xb = s.nextInt();
+		    float Xa = s.nextInt();
+		    float Xb = s.nextInt();
+		    int Acunsume = (int)Math.ceil(Xa/xa);
+		    int Bconsume =(int) Math.ceil(Xb/xb);
+		    System.out.println(Acunsume + Bconsume);
+		    t--;
+		}
+	}
+}
