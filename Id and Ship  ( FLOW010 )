@@ -1,0 +1,93 @@
+Write a program that takes in a letterclass ID of a ship and display the equivalent string class description of the given ID. Use the table below.
+
+Class ID	Ship Class
+B or b	BattleShip
+C or c	Cruiser
+D or d	Destroyer
+F or f	Frigate
+Input Format
+The first line contains an integer T, the total number of testcases. Then T lines follow, each line contains a character.
+
+Output Format
+For each test case, display the Ship Class depending on ID, in a new line.
+
+Constraints
+1 ≤ T ≤ 1000
+
+Sample 1:
+Input
+3 
+B
+c
+D
+
+Output
+BattleShip
+Cruiser
+Destroyer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    String st = s.next();
+		    char c = st.charAt(0);
+		    if((c=='B') || (c=='b')){
+		        System.out.println("BattleShip");
+		    }else if((c=='C') || (c=='c')){
+		        System.out.println("Cruiser");
+		    }
+		    else if((c=='D') || (c=='d')){
+		        System.out.println("Destroyer");
+		    }else if((c=='F') || (c=='f')){
+		        System.out.println("Frigate");
+		    }
+		    t--;
+		}
+	}
+}
