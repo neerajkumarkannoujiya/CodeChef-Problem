@@ -1,0 +1,116 @@
+Consider a currency system in which there are notes of six denominations, namely, Rs. 1, Rs. 2, Rs. 5, Rs. 10, Rs. 50, Rs. 100.
+If the sum of Rs. N is input, write a program to computer smallest number of notes that will combine to give Rs. N.
+
+Input
+The first line contains an integer T, total number of testcases. Then follow T lines, each line contains an integer N.
+
+Output
+For each test case, display the smallest number of notes that will combine to give N, in a new line.
+
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ N ≤ 1000000
+Sample 1:
+Input
+3 
+1200
+500
+242
+
+Output
+12
+5
+7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int count = 0;
+		    int rem = 0;
+		    int nrem = 0;
+		    int nnrem = 0;
+		    int nnnrem = 0;
+		    int rrem = 0;
+		    if(n%100==0){
+		        count = n/100;
+		    }else{
+		        rem = n%100;
+		        if(rem%50==0){
+		            count = n/100 + 1;
+		        }else{
+		            nrem = rem%50;
+		            if(nrem%10==0){
+		                count = n/100 + rem/50 + nrem/10;
+		            }else{
+		                nnrem = nrem%10;
+		                if(nnrem%5==0){
+		                    count = n/100 + rem/50 + nrem/10 + nnrem/5;
+		                }else{
+		                    nnnrem = nnrem%5;
+		                    if(nnnrem%2==0){
+		                        count =  n/100 + rem/50 + nrem/10 + nnrem/5 + nnnrem/2;
+		                    }else{
+		                        rrem = nnnrem%2;
+		                        if(rrem%1==0){
+		                            count =  n/100 + rem/50 + nrem/10 + nnrem/5 + nnnrem/2 + rrem;
+		                        }
+		                    }
+		                }
+		            }
+		        }
+		    }
+		    System.out.println(count);
+		    
+		    t--;
+		}
+	}
+}
