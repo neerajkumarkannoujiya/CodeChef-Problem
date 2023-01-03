@@ -1,0 +1,87 @@
+Some time ago, Chef bought X stocks at the cost of Rs. Y each. Today, Chef is going to sell all these X stocks at Rs. Z each. What is Chef's total profit after he sells
+them?
+
+Chef's profit equals the total amount he received by selling the stocks, minus the total amount he spent buying them.
+
+Input Format
+The first line of input contains an integer T, denoting the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains three space-separated integers X, Y and Z — the number of stocks, the price they were bought at, 
+and the price they can be sold at, respectively.
+Output Format
+For each test case print on a new line a single integer — Chef's profit after selling all the stocks he has.
+
+Constraints
+1≤T≤100
+1≤X,Y≤10^4
+Y≤Z≤10^4
+ 
+Sample 1:
+Input
+3
+2 5 20
+3 1 2
+4 5 6
+
+Output
+30
+3
+4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t= s.nextInt();
+		while(t!=0){
+		    int x = s.nextInt();
+		    int y = s.nextInt();
+		    int z = s.nextInt();
+		    
+		    int cost = x*y;
+		    int shell = x*z;
+		    System.out.println(shell-cost);
+		    
+		    t--;
+		}
+	}
+}
