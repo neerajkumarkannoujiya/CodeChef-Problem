@@ -1,0 +1,102 @@
+
+Salmon has some hidden numbers that he wants you to find!
+
+Given an integer N, find and output any two integers A and B such that:
+
+1≤A,B≤10^9, and
+A∗B=N.
+###Input: The first line of input consists of a single integer T (1≤T≤10^5) -- the number of testcases.
+
+The next T lines will consist of one integer, N (1≤ N≤10^9).
+
+###Output: For each of the T testcases, output two space-separated integers A and B.
+
+###Subtasks
+
+Subtask 1 [100 points]: No additional constraints.
+Sample 1:
+Input
+5
+1
+3
+5
+8
+10
+
+Output
+1 1
+1 3
+1 5
+1 8
+2 5
+
+
+
+
+
+
+
+
+******************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+// 		// your code goes here
+// 		Scanner s = new Scanner(System.in);
+// 		int t = s.nextInt();
+// 		while(t!=0){
+// 		    int n = s.nextInt();
+// 		    if(n<10){
+// 		        System.out.println(1 + " " + n);
+// 		    }else{
+// 		        boolean bl = false;
+// 		        int i =0;
+// 		        for(i =2;i<=n/2;i++){
+// 		            if(n%i==0){
+// 		                bl = true;
+// 		                break;
+// 		            }
+// 		        }
+// 		        if(bl){
+// 		            System.out.println(i + " " + n/i);
+// 		        }else{
+// 		            System.out.println(1 + " " + n);
+// 		        }
+// 		    }
+// 		    t--;
+// 		}
+
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		for(int i=0;i<t;i++)
+		{
+		    int n=s.nextInt();
+		    System.out.println(1+" "+n);
+		    
+		}
+	
+
+		
+	}
+}
