@@ -1,0 +1,103 @@
+Alice is still not satisfied with Bob's math skills so she gave him a new challenge.
+
+Given a positive integer N, find any 3 distinct positive integers A, B, C such that:
+
+The product of any two of these 3 integers is a divisor of N.
+The product of all three integers is a multiple of N.
+If multiple solutions exist, you may print any of them.
+Print −1 if no solution exists.
+
+Input Format
+The first line of input will contain a single integer T, denoting the number of test cases.
+The first and only line of each test case contains a single integer, N.
+Output Format
+For each test case, output on a new line three space-separated integers satisfying the given condition.
+Print −1 if the answer does not exist.
+
+Constraints
+1≤T≤100
+1≤N≤10^9
+ 
+Sample 1:
+Input
+3
+30
+24
+3
+
+Output
+2 3 5
+2 6 4
+-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+******************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    public static int val(int n){
+        if(n<=1){
+            return -1;
+        }
+        for(int i =2;i*i<n;i++){
+            if(n%i==0){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    int n = s.nextInt();
+		    int x = val(n);
+		    if(x== -1){
+		        System.out.println(-1);
+		    }else{
+		        System.out.println(x + " " + (n/x) + " " + 1);
+		    }
+		    t--;
+		}
+	}
+}
