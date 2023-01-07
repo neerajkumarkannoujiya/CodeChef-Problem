@@ -1,0 +1,111 @@
+The weather report of Chefland is Good if the number of sunny days in a week is strictly greater than the number of rainy days.
+
+Given 7 integers A1, A2, A3, A4, A5, A6, A7 where Ai = 1 denotes that the ith day of week in Chefland is a sunny day, Ai = 0 denotes that the ith day in Chefland
+is a rainy day. Determine if the weather report of Chefland is Good or not.
+
+Input Format
+First line will contain T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, 7 space separated integers A1, A2, A3, A4, A5, A6, A7 .
+Output Format
+For each testcase, print "YES" if the weather report of Chefland is Good, otherwise print "NO". Print the output without quotes.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Constraints
+1≤T≤20
+0≤Ai≤1
+Sample 1:
+Input
+4
+1 0 1 0 1 1 1
+0 1 0 0 0 0 1
+1 1 1 1 1 1 1
+0 0 0 1 0 0 0
+Output
+YES
+NO
+YES
+NO
+Explanation:
+Test case 1: The number of sunny days is 5 and the number of rainy days is 2. Hence the weather report of Chefland is Good.
+
+Test case 2: The number of sunny days is 1 and the number of rainy days is 6. Hence the weather report of Chefland is not Good.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t!=0){
+		    
+		    int arr[] = new int[7];
+		    int one = 0;
+		    int zero = 0;
+		    for(int i =0;i<7;i++){
+		        arr[i] = s.nextInt();
+		        
+		    }
+		    for(int i = 0;i<7;i++){
+		        if(arr[i]==1){
+		            one++;
+		        }
+		        else{
+		            zero++;
+		        }
+		    }
+		    
+		    
+		    if(one>zero){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
+		    
+		    t--;
+		}
+	}
+}
+
