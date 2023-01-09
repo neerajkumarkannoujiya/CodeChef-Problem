@@ -1,0 +1,113 @@
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given a string S with length N. You may perform the following operation any number of times: choose a non-empty substring of S (possibly the whole string S)
+such that each character occurs an even number of times in this substring and erase this substring from S. (The parts of SS before and after the erased substring
+are concatenated and the next operation is performed on this shorter string.)
+
+For example, from the string "acabbad", we can erase the highlighted substring "abba", since each character occurs an even number of times in this substring. After
+this operation, the remaining string is "acd".
+
+Is it possible to erase the whole string using one or more operations?
+
+Note: A string B is a substring of a string A if B can be obtained from AA by deleting several (possibly none or all) characters from the beginning and several 
+(possibly none or all) characters from the end.
+
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains a single integer N.
+The second line contains a single string SS with length N.
+Output
+For each test case, print a single line containing the string "YES" if it is possible to erase the whole string or "NO" otherwise (without quotes).
+
+Constraints
+1≤T≤200
+1≤N≤1,000
+SS contains only lowercase English letters
+Sample 1:
+Input
+4
+6
+cabbac
+7
+acabbad
+18
+fbedfcbdaebaaceeba
+21
+yourcrushlovesyouback
+
+Output
+YES
+NO
+YES
+NO
+Explanation:
+Example case 1: We can perform two operations: erase the substring "abba", which leaves us with the string "cc", and then erase "cc".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+			Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int n=sc.nextInt();
+		    String str=sc.next();
+		    int count=0;
+		    boolean res=true;
+		    for (int i=0;i<str.length() ;i++ ){
+		        for(int j=0;j<str.length();j++){
+		            if(str.charAt(i)==str.charAt(j))
+		                count++;
+		        }
+		    if(count%2!=0){
+		        res=false;
+		        continue;
+		    }
+		    } 
+		    
+		    if(res)
+		        System.out.println("YES");
+		    else
+		        System.out.println("NO");
+		}
+	}
+}
