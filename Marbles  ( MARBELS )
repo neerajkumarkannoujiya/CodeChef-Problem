@@ -1,0 +1,94 @@
+Rohit dreams he is in a shop with an infinite amount of marbles. He is allowed to select n marbles.
+There are marbles of k different colors. From each color there are also infinitely many marbles.
+Rohit wants to have at least one marble of each color, but still there are a lot of possibilities for his selection. In his effort to make a decision he wakes up.
+Now he asks you how many possibilities for his selection he would have had.
+Assume that marbles of equal color can't be distinguished, and the order of the marbles is irrelevant.
+
+Input Format
+The first line of input contains a number T <= 100 that indicates the number of test cases to follow.
+Each test case consists of one line containing n and k, where n is the number of marbles Rohit selects and k is the number of different colors of the marbles.
+
+Output Format
+For each test case print the number of possibilities that Rohit would have had. You can assume that this number fits into a signed 64 bit integer.
+
+Constraints
+1<=k<=n<=1000000
+Sample 1:
+Input
+2
+10 10
+30 7
+
+Output
+1
+475020
+
+
+
+
+
+
+
+
+
+
+
+
+
+***************************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0)
+		{
+		   int n=sc.nextInt();
+		   int k=sc.nextInt();
+		   if(n==k)
+		   {
+		       System.out.println(1);
+		       continue;
+		   }
+		   
+		       n=n-k;
+		       long ans=1;
+		       for(int i=1;i<k;i++)
+		       {
+		           ans=ans*(n+i)/i;
+		       }
+		  System.out.println(ans);
+	   	   
+		}
+	}
+}
