@@ -1,0 +1,33 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t-->0){
+		    double w = s.nextInt();
+		    double x = s.nextInt();
+		    double y = s.nextInt();
+		    double z = s.nextInt();
+		    double capacity = x-w;
+		    double availwater = z*y;
+		    if(capacity==availwater){
+		        System.out.println("Filled");
+		    }
+		    else if(capacity>availwater){
+		        System.out.println("Unfilled");
+		    }else{
+		        System.out.println("OverFlow");
+		    }
+		    
+		}
+	}
+}
