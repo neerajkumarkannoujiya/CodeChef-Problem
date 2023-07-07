@@ -1,0 +1,30 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t-->0){
+		    int Pc = s.nextInt();
+		    int Pr = s.nextInt();
+		    
+		    int digitC = Pc/9;
+		    int digitR = Pr/9;
+		    if(digitC == digitR)
+		        System.out.println(1 + " " + (Pc%9 == 0 ? digitC : digitC+1));
+		    else if(digitC > digitR){
+		        System.out.println(1 + " " + (Pr%9 == 0 ? digitR : digitR+1));
+		    }else if(digitC < digitR){
+		        System.out.println(0 + " " + (Pc%9 == 0 ? digitC : digitC+1));
+		    }
+		}
+	}
+}
