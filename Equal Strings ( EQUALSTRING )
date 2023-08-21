@@ -1,0 +1,31 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        while(t-->0) {
+            int n = s.nextInt();
+            String A = s.next();
+            String B = s.next();
+            int count =0;
+            HashSet<Character> hs = new HashSet<>();
+            for(int j=0;j<n;j++){
+                if(A.charAt(j)!=B.charAt(j) && !hs.contains(B.charAt(j))){
+                    count++;
+                    hs.add(B.charAt(j));
+                }
+            }
+            System.out.println(count);
+
+       }
+	}
+}
