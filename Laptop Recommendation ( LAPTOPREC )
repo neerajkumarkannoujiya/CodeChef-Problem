@@ -1,0 +1,52 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		
+		while(t-->0) {
+		// your code goes here
+		    int n = s.nextInt();
+            int[] lap = new int[10];
+            int[] fr = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                fr[i] = s.nextInt();
+                lap[fr[i] - 1]++;
+            }
+
+            int maxCount = lap[0];
+            int index = 0;
+            for (int i = 1; i < 10; i++) {
+                if (maxCount < lap[i]) {
+                    maxCount = lap[i];
+                    index = i;
+                }
+            }
+            
+            for (int i = 0; i < 10; i++) {
+                if (index == i) {
+                    continue;
+                }
+                if (maxCount == lap[i]) {
+                    maxCount = -1;
+                    break;
+                }
+            }
+            if (maxCount == -1) {
+                System.out.println("CONFUSED");
+            } else {
+                System.out.println(index + 1);
+            }
+		}
+	}
+}
