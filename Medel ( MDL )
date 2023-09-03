@@ -1,0 +1,30 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        while(times --> 0){
+            int n = sc.nextInt();
+            int[] arr = new int[n];
+            ArrayList<Integer> clist = new ArrayList<>();
+            for(int i=0;i<n;i++){
+                arr[i] = sc.nextInt();
+                clist.add(arr[i]);
+            }
+            Arrays.sort(arr);
+            int max = clist.indexOf(arr[0]);
+            int min = clist.indexOf(arr[n-1]);
+            if(max<min) System.out.println(arr[0]+" "+arr[n-1]);
+            else System.out.println(arr[n-1]+" "+arr[0]);
+        }
+	}
+}
