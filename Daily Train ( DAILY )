@@ -1,0 +1,59 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    private static final Scanner sc = new Scanner(System.in);
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		int x = sc.nextInt(), answer = 0;
+		for(int tests = sc.nextInt(); tests > 0; tests--)
+		    answer += solve(x);
+		    
+		System.out.println(answer);
+	}
+	
+	private static int solve(int x) {
+        String str = sc.next();
+        
+        int j = str.length() - 1, carAnswer = 0;
+        
+        for(int i=0; i<9; i++) {
+            char arr[] = new char[6];
+            int current = 0;
+            
+            for(int k=0; k<6; k++) {
+                if(k < 4) { arr[k] = str.charAt((i*4) + k); }
+                
+                else { arr[k] = str.charAt(j); j--; }
+                
+                if(arr[k] == '0') current++;
+            }
+            
+            carAnswer += nChooseR(current, x);
+        }
+        
+        return carAnswer;
+	}
+	
+	private static int nChooseR(int n, int r) {
+	    if(r > n) return 0;
+	    if(r == n) return 1;
+	    
+	    else return fact(n) / (fact(n - r) * fact(r));
+	}
+	
+	private static int fact(int x) {
+	    int ans = 1;
+	    
+	    for(int i = 1; i <= x; i++)
+	        ans *= i;
+	    
+	    return ans;
+	}
+}
