@@ -1,0 +1,36 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    public static Scanner s = new Scanner(System.in);
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		
+		for(int tests = s.nextInt(); tests > 0; tests--) 
+		    solve(s.nextInt());
+	}
+		
+	static void solve(int n) {
+	    int[] arr = new int[n];
+	    
+	    for(int i=0; i<n; i++)
+	        arr[i] = s.nextInt();
+	        
+	    int idiots = 0;
+	    
+	    if(arr[0] != arr[1]) idiots++;
+	    if(arr[n-1] != arr[n-2]) idiots++;
+	    
+	    for(int i=1; i < n-1; i++) 
+	        if(arr[i] != arr[i-1] || arr[i] != arr[i+1])
+	            idiots++;
+	    
+	    System.out.println(idiots);
+	}
+}
