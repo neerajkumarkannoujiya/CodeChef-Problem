@@ -20,6 +20,7 @@ class Codechef
 		        count++;
 		        val = val/10;
 		    }
+
 		    
 		    if(count==5){
 		        System.out.println("YES");
